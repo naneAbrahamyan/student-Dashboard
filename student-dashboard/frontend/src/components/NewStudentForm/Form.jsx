@@ -25,20 +25,20 @@ export default function Form() {
   const { theme } = useContext(ThemeContext);
   const { setQuery } = useContext(DataContext);
 
-  React.useEffect(() => {
-    fetch("https://api.example.com/countries")
-      .then((response) => response.json())
-      .then((data) => setCountries(data));
-  }, []);
+  // React.useEffect(() => { //backend not yet implemented
+  //   fetch("http://localhost:8050/countries")
+  //     .then((response) => response.json())
+  //     .then((data) => setCountries(data));
+  // }, []);
 
-  const handleCountryChange = (event) => {
-    const country = event.target.value;
-    setFormData((prevData) => ({ ...prevData, country }));
+  // const handleCountryChange = (event) => {
+  //   const country = event.target.value;
+  //   setFormData((prevData) => ({ ...prevData, country }));
 
-    fetch(`https://api.example.com/countries/${country}/cities`)
-      .then((response) => response.json())
-      .then((data) => setCities(data));
-  };
+  //   fetch(`http://localhost:8050/countries/${country}/cities`)
+  //     .then((response) => response.json())
+  //     .then((data) => setCities(data));
+  // };
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -129,7 +129,7 @@ export default function Form() {
           className: `${theme}-form`,
         }}
       />
-      <FormControl fullWidth margin="normal" className={`${theme}-form`}>
+      {/* <FormControl fullWidth margin="normal" className={`${theme}-form`}> //this part could be added in future 
         <InputLabel
           id="country-label"
           className={`${theme}-form`}
@@ -157,8 +157,8 @@ export default function Form() {
             </MenuItem>
           ))}
         </Select>
-      </FormControl>
-      <FormControl fullWidth margin="normal" className={`${theme}-form`}>
+      </FormControl> */}
+      {/* <FormControl fullWidth margin="normal" className={`${theme}-form`}>
         <InputLabel
           id="city-label"
           InputProps={{
@@ -186,7 +186,7 @@ export default function Form() {
             </MenuItem>
           ))}
         </Select>
-      </FormControl>
+      </FormControl> */}
       <Button type="submit" variant="contained" color="primary">
         Submit
       </Button>

@@ -1,0 +1,47 @@
+.container {
+  width: 300px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Light-color {
+  background: var(--pink);
+  color: var(--VeryDarkBlueLight);
+
+  font-size: 16px;
+  font-family: "Nunito Sans";
+}
+
+.Dark-color {
+  background-color: var(--VeryDarkBlueLight);
+  color: var(--LightGrey);
+  font-size: 16px;
+  font-family: "Nunito Sans";
+}
+
+.Light-form {
+  background: var(--pink);
+  color: var(--VeryDarkBlueLight);
+
+  font-size: 16px;
+  font-family: "Nunito Sans";
+}
+
+.Dark-form {
+  background-color: var(--white);
+  color: var(--LightGrey);
+  font-size: 16px;
+  font-family: "Nunito Sans";
+}
+
+.edit-button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
